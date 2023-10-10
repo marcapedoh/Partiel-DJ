@@ -1,0 +1,244 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block main-content %}
+<br><br><br><br>
+<p align="center">
+    I. Statistique descriptive univariée<br>
+<u><b>Exercice 1</b></u><br>
+On dispose des résultats d’une enquête concernant l’âge et les loisirs d’une population de 20 
+personnes:<br>
+<table border="3">
+    <tr>
+        <th>Age</th>
+        <td>&nbsp;12</td>
+        <td>&nbsp;14</td>
+        <td>&nbsp;40</td>
+        <td>&nbsp;35</td>
+        <td>&nbsp;26</td>
+        <td>&nbsp;30</td>       
+        <td>&nbsp;30</td>       
+        <td>&nbsp;50</td>        
+        <td>&nbsp;75</td>        
+        <td>&nbsp;50</td>        
+        <td>&nbsp;30</td>        
+        <td>&nbsp;45</td>        
+        <td>&nbsp;25</td>     
+        <td>&nbsp;55</td>   
+        <td>&nbsp;28</td>   
+        <td>&nbsp;25</td> 
+        <td>&nbsp;50</td>
+        <td>&nbsp;40</td>
+        <td>&nbsp;25</td>
+        <td>&nbsp;35</td>
+    </tr>
+    <tr>
+        <th>Loisirs</th>
+        <td>&nbsp;S</td>
+        <td>&nbsp;S</td>
+        <td>&nbsp;C</td>
+        <td>&nbsp;C</td>
+        <td>&nbsp;S</td>
+        <td>&nbsp;T</td>        
+        <td>&nbsp;T</td>        
+        <td>&nbsp;L</td>        
+        <td>&nbsp;L</td>        
+        <td>&nbsp;L</td>        
+        <td>&nbsp;T</td>        
+        <td>&nbsp;C</td>     
+        <td>&nbsp;C</td>   
+        <td>&nbsp;C</td>   
+        <td>&nbsp;S</td> 
+        <td>&nbsp;L</td>
+        <td>&nbsp;L</td>
+        <td>&nbsp;C</td>
+        <td>&nbsp;T</td>
+        <td>&nbsp;T</td>
+    </tr>
+</table>
+
+<i> Designation des indices: Codification : S : Sport, C : Cinéma, T : Théâtre, L : Lecture</i><br>
+a. Faire l’étude du caractère « âge » : dresser le tableau statistique (effectifs, effectifs 
+cumulés),calculer les valeurs de tendance centrale et ceux de la dispersion et tracez le 
+diagramme en bâtons et la boite à moustaches de cette distribution<br>
+b. Faire l’étude du caractère « Loisir » dresser le tableau statistique, déterminer le mode 
+et tracez le diagramme en bâtons et le diagramme à secteurs.<br><br><br>
+<h2 align="center"><b><u>Correction de l’exercice 1</u></b></h2><br>
+a. Age est une variable quantitative discrète
+<table border="2" align="center">
+    <tr align="center">
+        <th align="center">Age</th>
+        <th align="center">Ni</th>
+        <th align="center">fi</th>
+        <th align="center">Fi</th>
+        <th align="center">fi*xi</th>
+        
+    </tr>
+    <tr align="center">
+        <td>12</td>
+        <td>1</td>
+        <td>0.05</td>
+        <td>0.6</td>
+    </tr>
+    <tr align="center">
+        <td>14</td>
+        <td>1</td>
+        <td>0.05</td>
+        <td>0.1</td>
+        <td>0.7</td>
+    </tr>
+    <tr align="center">
+        <td align="center">25</td>
+        <td>3</td>
+        <td>0.15</td>
+        <td>0.25</td>
+        <td>3.75</td>
+    </tr>
+</table>
+Age Ni fi Fi fi xi
+
+25 3 0.15 0.25 3.75
+26 1 0.05 0.3 1.3
+28 1 0.05 0.35 1.4
+30 3 0.15 0.5 4.5
+35 2 0.10 0.6 3.5
+40 2 0.10 0.7 4
+45 1 0.05 0.75 2.25
+50 3 0.15 0.9 7.5
+55 1 0.05 0.95 2.75
+75 1 0.05 1 3.75
+ 20 1 36
+Les valeurs de tendance centrale (paramètre de position)
+ Mode 
+ Médiane (Q2)
+ Moyenne 
+ Q1 et Q3
+Le mode =25 ; 30 ; 50
+Moyenne : 𝑋 = 36
+Q1=25 ; Q2=30 ; Q3=45
+4
+b. La variable loisir est une variable qualitative nominale
+X xi fi
+S 4 4/20
+C 6 6/20
+T 5 5/20
+L 5 5/20
+ 20 1
+Déterminer le mode ?
+C’est la modalité qui a le plus grand effectif : C
+Diagramme à secteurs
+Diagramme en bâtons
+T
+C
+S
+L
+0
+1
+2
+3
+4
+5
+6
+7
+S C T L
+5
+Exercice 2
+On observe 100 fois le nombre d’arrivées (variable X) de clients à un bureau de poste pendant 
+un intervalle de temps (10 minutes) et on obtient les valeurs suivantes :
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+4 4 4 4 4 4 5 5 5 5 5 5 5 6 6 6 6 6 6 6
+a. Dresser le tableau statistique de la distribution de la variable X (effectifs cumulés, 
+…).
+b. Calculer les valeurs de tendance centrale de la distribution : la moyenne, le mode 
+et les trois quartiles Q1, Q2 et Q3.
+c. Calculer les valeurs de la dispersion de la distribution : variance, l’écart type et 
+l’intervalle interquartile.
+d. Tracer le diagramme en bâtons et la boite à moustaches de cette distribution.
+Correction de l’exercice 2
+a. Tableau statistique
+X ni fi Fi xi*fi xi
+2
+*fi
+1 15 0.15 0.15 0.15 0.15
+2 25 0.25 0.4 0.5 1
+3 26 0.26 0.66 0.78 2.34
+4 20 0.2 0.86 0.8 3.2
+5 7 0.07 0.93 0.35 1.75
+6 7 0.07 1 0.42 2.52
+ 100 1 3 10.96
+b. Les valeurs de tendance centrale
+La moyenne : 𝑋 = 3
+Le mode= 3
+Indice de Q1 est n/4=25  Q1=2
+Indice de Q2 est n/2=50  Q2=3
+Indice de Q3 est 3n/4=75  Q3=4
+c. Les valeurs de la dispersion de la distribution : variance, l’écart type et 
+l’intervalle interquartile :
+Var(X)= 10.96 – 3
+2
+= 1.96
+𝜕x= 𝑣𝑎𝑟 (𝑋) = 1.4
+ IQ = Q3-Q1=4 – 2 = 2
+ 
+Q1-1.5.IQ=2 - 1.5 . 2= -1
+Q3+1.5 . IQ= 4+1.5 . 2=7
+6
+Exercice 3
+On dispose des résultats d’une enquête concernant les loyers annuels des appartements dans 
+un quartier de la ville.
+Montant du loyer (x 1000) Effectifs 
+ 4; 6 20
+ 6; 8 40
+ 8; 10 80
+ 10; 15 30
+ 15; 20 20
+ 20; 30 10
+a. Compléter le tableau statistique (valeurs centrales, effectifs cumulés, fréquence, 
+fréquences cumulés)
+b. Déterminez les valeurs de tendance centrale de la distribution : moyenne, mode et les 
+quartiles.
+c. Mesurez la dispersion de la distribution au moyen de : l’étendue, l’écart type et de 
+l’intervalle interquartile.
+d. Tracez l’histogramme et la boite à moustaches de cette distribution.
+Correction de l’exercice 3
+Montant x 1000 ni xi Ni fi Fi fi xi di
+ 4; 6 20 5 20 0.1 0.1 0.5 10
+ 6; 8 40 7 60 0.2 0.3 1.4 20
+ 8; 10 80 9 140 0.4 0.7 3.6 40
+ 10; 15 30 12.5 170 0.15 0.85 1.875 6
+ 15; 20 20 17.5 190 0.1 0.95 1.75 4
+ 20; 30 10 25 200 0.05 1 1.25 1
+ 1 10.375 x 1000
+xi = 
+𝑎𝑖+𝑎𝑖+1
+2
+342.8571
+200
+450
+800
+550
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+Prix en DH
+Q1
+minimum
+Mediane
+Maximum
+Q3
+7
+ di = 𝑛𝑖
+𝑎𝑖+1− 𝑎𝑖
+ densité parce que on a pas la même amplitud
+</p>
+{% endblock main-content %}

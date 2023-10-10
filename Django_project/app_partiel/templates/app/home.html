@@ -1,0 +1,148 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title%}
+Home
+{% endblock title %}
+
+{% block main-content %}
+<header>
+    <div class="container header_container">
+        <div class="header_left">
+            <br><br><br><br><br>
+            <h1>Bienvenue Chers Etudiants</h1>
+            <p>Cherchez,Apprenez et Maitrisez !</p>
+            <a href="{% url 'login' %}" class="btn btn-primary">Get Started</a>
+        </div>
+        <!--<div class="header_right">
+           <img src="{% static 'app/images/retour.jpg' %}"
+        </div-->
+    </div>
+</header>
+<section class="categories">
+    <div class="container categories__container">
+        <div class="categories__left">
+            <h1>Categories</h1>
+            <p>Choississez un contenu</p>
+            <a href="{% url 'categorie' %}" class="btn"> Learn More</a>
+        </div>
+        <div class="categories__right">
+            <article class="category">
+                <a href="{% url 'detail' 'MTHS' %}">
+                    <span class="category__icon"><i class="uil uil-sigma"></i></span>
+                    <h5>Maths</h5>
+                    <p>Cours,exercices et épreuves de maths</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'ALPG' %}">
+                    <span class="category__icon"><i class="uil uil-brackets-curly"></i></span>
+                    <h5>Algorithmes et programmation</h5>
+                    <p>Boostez votre logique algorithmique avec ces contenus</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'CCNA' %}">
+                    <span class="category__icon"><i class="uil uil-globe"></i></span>
+                    <h5>Réseau</h5>
+                    <p>TP et épreuves de réseau(CCNA)</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'EN' %}">
+                    <span class="category__icon"><i class="uil uil-plug"></i></span>
+                    <h5>Electronique</h5>
+                    <p>Cours, tutoriels, exos et épreuves d'electronique numérique</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'LGUE' %}">
+                    <span class="category__icon"><i class="uil uil-english-to-chinese"></i></span>
+                    <h5>Competences lingustiques</h5>
+                    <p>Dans cette rubrique vous avez tout ce qui concerne que ce soit l'art de savoir parler ou aide pour améliorer votre niveau en langue</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'IC3' %}">
+                    <span class="category__icon"><i class="uil uil-desktop"></i></span>
+                    <h5>Bureautiques</h5>
+                    <p>IC3 tout ce qui concerne les outils proposés par <b>Microsoft office</b> Word Excel PowerPoint et bien plus encore</p>
+                </a>
+            </article>
+        </div>
+    </section>&nbsp;<br><br><br>
+    <!--A mettre sur les pages des differentes categories-->
+    <section class="courses">
+        <h2>Nos tutoriels par catégorie</h2>
+        <div class="container courses__container">
+           <!-- <article class="course">
+                <div class="course__image">
+                    <img src="{% static 'app/images/php_cours.jfif' %}">
+                </div>
+                <div class="courses__info">
+                    <h4>PHP</h4>
+                    <p>cours de php sur les bases du langage, niveau intermédaire(traitement des formulaires:la methode CRUD) et niveau avancé avec l'orienté object</p>
+                    <a href="{% url 'detail' 'ALPG' %}" class="btn btn-primary">Learn More</a>
+                </div>
+                </article>
+            </div-->  
+            
+            <!--article class="course">
+                <div class="course__image">
+                    <img src="{% static 'app/images/maths.webp' %}" >
+                </div>
+                <div class="courses__info">
+                    <h4>Maths</h4>
+                    <p>Maths analyse,Discrète,probabilité,Stastistiques,algèbre linéaire</p>
+                    <a href="{% url 'detail' 'MTHS' %}" class="btn btn-primary">Learn More</a>
+                </div>
+                
+            </article-->
+            <article class="course">
+                <div class="course__image">
+                    <img src="{% static 'app/images/videos.png' %}" width="300px" height="300px">
+                </div>
+                <div class="courses__info">
+                    <br>
+                    <h4>Videos</h4><br>
+                    <a href="{% url 'detail' 'ALPG' %}" class="btn btn-primary">Learn More</a>
+                </div>
+               
+            </article>
+        </div>
+    </section>
+    <!--================ End Video Section=================-->
+    
+
+    <section class="container professeurs__container mySwiper">
+        <h2> Commentaires de certains de nos Professeurs</h2>
+        <div class="swiper-wrapper">
+            <article class="professeur swiper-slide">
+                <div class="avatar">
+                    <img src="{% static 'app/images/avatar1.jpeg '%}">
+                </div>
+                <div class="professeur__info">
+                    <h5>Bakme hugo</h5>
+                    <small>Professeur de Cryptographie et sécurité Informatique</small>
+                <div>
+                <div class="professeur__body">
+                    <p>Le principe de l'évolution est beaucoup plus rapide en informatique que chez le bipède.</p>
+                </div>
+            </article>
+            <article class="professeur swiper-slide">
+                <div class="avatar">
+                    <img src="{% static 'app/images/avatar.jpeg '%}">
+                </div>
+                <div class="professeur__info">
+                    <h5>Moutchad rajaa & RoyalG Marck </h5>
+                    <small>Professeur de Maths,algorithmique et langages de programmation</small>
+                <div>
+                <div class="professeur__body">
+                    <p>Quelle prétention de prétendre que l'informatique est récente : Adam et Eve avaient déjà un Apple !
+
+                        &nbsp;
+                        <br>L'informatique, ça fait gagner beaucoup de temps... à condition d'en avoir beaucoup devant soi !
+                    </p>
+                </div>
+            </article>
+        </div><br><br><br>
+{% endblock main-content%}

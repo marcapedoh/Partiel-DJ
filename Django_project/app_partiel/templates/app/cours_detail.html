@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block main-content %}
+<br><br><br><br><br><br><br>
+<h3>Cours: </h3>
+<div class="container">
+    <div class="row flex justify-content-between">
+        <div class="img2 col-lg-5 mg-5">
+            <img src="{{matiere.mat_image.url}}" width="250px" height="200px"  class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="">
+
+        </div>
+        <div class="coursdetail col-lg-5">
+            <h1 style="font-family: Georgia; font-size: 50px;">{{matiere.title}}</h1>
+            
+            <br><br><h4>cours Features</h4>
+            <ul class="fs-5" style="font-family: Rajdhani;">
+                <li>{{matiere.description}}</li>
+            </ul>
+            <div class="buttons row flex" style="font-family: Rajdhani;">
+                <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white">Download</button>
+                <div class="btn btn-dark p-1 m-1 btn-lg"><a href="{% url 'recherche' %}" class="text-decoration-none text-white"><br>Search similar on youtube</a></div>
+
+            </div>
+        </div>
+
+    </div>
+</div><br>
+<br><br><br><br><br><br>
+{% endblock main-content %}

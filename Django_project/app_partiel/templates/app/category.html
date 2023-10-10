@@ -1,0 +1,81 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+<br><br><br><br><br>
+<section class="categories">
+    <div class="container categories__container">
+        <div class="categories__left">
+            <h1>Categories</h1>
+            <p>Choississez un contenu</p>
+            
+        </div>
+        <div class="categories__right">
+            <article class="category">
+                <a href="{% url 'detail' 'MTHS' %}">
+                    <span class="category__icon"><i class="uil uil-sigma"></i></span>
+                    <h5>Maths</h5>
+                    <p>Cours,exercices et épreuves de maths</p>
+                </a>
+            </article>
+           
+            <article class="category">
+                <a href="{% url 'detail' 'ALPG' %}">
+                    <span class="category__icon"><i class="uil uil-brackets-curly"></i></span>
+                    <h5>Algorithmes et programmation</h5>
+                    <p>Boostez votre logique algorithmique avec ces contenus</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'CCNA' %}">
+                    <span class="category__icon"><i class="uil uil-globe"></i></span>
+                    <h5>Réseau</h5>
+                    <p>TP et épreuves de réseau(CCNA)</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'EN' %}">
+                    <span class="category__icon"><i class="uil uil-plug"></i></span>
+                    <h5>Electronique</h5>
+                    <p>Cours, tutoriels, exos et épreuves d'electronique numérique</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'LGUE' %}">
+                    <span class="category__icon"><i class="uil uil-english-to-chinese"></i></span>
+                    <h5>Competences lingustiques</h5>
+                    <p>Dans cette rubrique vous avez tout ce qui concerne que ce soit l'art de savoir parler ou aide pour améliorer votre niveau en langue</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'IC3' %}">
+                    <span class="category__icon"><i class="uil uil-desktop"></i></span>
+                    <h5>Bureautiques</h5>
+                    <p>IC3 tout ce qui concerne les outils proposés par <b>Microsoft office</b> Word Excel PowerPoint et bien plus encore</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'LINUX' %}">
+                    <span class="category__icon"><i class="uil uil-linux"></i></span>
+                    <h5>Linux</h5>
+                    <p>Initiation aux systemes d'exploitation unix </p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'CRYPT' %}">
+                    <span class="category__icon"><i class="uil uil-bitcoin"></i></span>
+                    <h5>Cryptographie</h5>
+                    <p>cours et exercices sur la Cryptographie assymetrique et sur la Cryptographie symetrique </p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="{% url 'detail' 'SCIN' %}">
+                    <span class="category__icon"><i class="uil uil-shield-check"></i></span>
+                    <h5>Securité informatique</h5>
+                    <p>Initialtion à la sécurité informatique </p>
+                </a>
+            </article>
+            
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock main-content %}

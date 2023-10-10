@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block main-content %}
+<br><br><br><br><br><br>
+<div class="container">
+    <div class="col-sm-6 offset-sm-3">
+        <h3 align="center">Login</h3>
+        <hr>
+        <form action="" method="post" novalidate class="shadow p-5">
+            {% csrf_token %}
+            {% for fm in form %}
+                <p align="center">{{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small></p>
+                <br><br>
+            {% endfor %}
+            <p align="center"><input type="submit" value="Submit" class="btn btn-primary"> <br></p>
+            <p align="center"><div class="text-center text-primary fw-bold"></p>
+                <p align="center"><small>Existing User ? <a href="{% url 'enregistrement' %}" class="text-danger">Register Now </a></small></p>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br><br><br><br>
+{% endblock main-content %}

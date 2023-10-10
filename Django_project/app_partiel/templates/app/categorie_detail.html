@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block main-content %}
+<br><br><br><br><br>
+<h2>Category:  </h2>
+<br>
+<div class="container my-5">
+    <div class="row ">
+        <div class="col-sm-3">
+            {% for val in title %}
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                {{val.title}} </a>
+            {% endfor %}
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                {% for mat in matiere %}
+                    <div class="col text-center mb-4">
+                        <a href="{% url 'coursdetail' mat.id %}" class="btn">
+                        <div>
+                            <img src="{{mat.mat_image.url}}" width="300px" height="200px" />
+                            <div class="fw-bold">{{mat.title}}</div>                           
+                        </div>
+                        </a>
+                    </div>
+                <br><br>
+                <br><br>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock main-content %}

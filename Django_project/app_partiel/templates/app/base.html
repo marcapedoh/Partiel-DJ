@@ -1,0 +1,96 @@
+<!Doctype>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiblle" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonPortail |{% block title%}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'app/css/style1.css' %}">
+    <!--ICONSCOUT CON-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--Google Fonts (MoNTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <!--Swiper CDN js-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+     <!--boostrap css
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="{% url 'home' %}"><h4>MonPortail</h4></a>
+            <ul class="nav__menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'recherche' %}">Recherche</a></li>
+                <li><a href="{% url 'profile' %}">Profil</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'enregistrement' %}">Registration</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    
+            {% block main-content %}
+
+            {% endblock main-content%}
+            <footer>
+              <div class="container footer__container">
+                  <div class="footer__1">
+                      <a href="{% url 'home' %}" class="footer__logo"><h4>MonPortail</h4></a>
+                      <p>Augmentez vos connaissances sur notre site</p>
+                  </div>
+                  <div class="footer__2">
+                      <h4>Permalinks</h4>
+                      <ul class="permalinks">
+                          <li><a href="{% url 'home' %}">Home</a></li>
+                          <li><a href="{% url 'recherche' %}">Recherche</a></li>
+                          <li><a href="{% url 'profile' %}">Profil</a></li>
+                          <li><a href="{% url 'login' %}">Login</a></li>
+                          <li><a href="{% url 'enregistrement' %}">Registration</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer__3">
+                      <h4>Primacy</h4>
+                      <ul class="privacy">
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms and conditions</a></li>
+                          <li><a href="#">Refund Policy</a></li>
+                         
+                      </ul>
+                  </div>
+                  <div class="footer__4">
+                      <h4>Contact Us</h4>
+                      <div>
+                          <p>+228 70 34 44 82</p>
+                          <p>adralabel@gmail.com</p>
+                      </div>
+                      <ul class="footer__socials">
+                          <li><a href="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2F%3Fstype%3Dlo%26jlou%3DAffb6UIo6OIRhicjk78Z0HSI3yhXn768AgrNM48YaGqzvXBVTfR1bw-LROhag1IwJrGweUPJXXOHm0e9B4y6OF14pkDCS6fbdeHrl6GT7q3rRw%26smuh%3D53205%26lh%3DAc-bc-SrmtXSWxu8dLQ&lwv=120&lwc=3252004"><i class="uil uil-facebook-f"></i></a>
+                          <li><a href="https://www.instagram.com/?hl=fr"><i class="uil uil-instagram-alt"></i></a>
+                          <li><a href="https://twitter.com/?lang=fr"><i class="uil uil-twitter"></i></a>
+                          <li><a href="https://business.linkedin.com/fr-fr/marketing-solutions/generate-leads?src=go-pa&trk=sem-ga_campid.9521951902_asid.105515443868_crid.421508102398_kw.%2Bplateforme%20%2Blinkedin_d.c_tid.kwd-883188283879_n.g_mt.b_geo.1012727&mcid=6842130579375308845&cid=&gclid=CjwKCAiA_6yfBhBNEiwAkmXy58gLQSWZycshEUMr7sMZwMQwf5sB7ktih7PE0RB0hz8o1-jm5YdzExoCxuUQAvD_BwE&gclsrc=aw.ds"><i class="uil uil-linkedin-alt"></i></a>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer__copyright">
+                  <small>Copyright &copy; MonPortail projet_Etudiant</small>
+              </div>
+          </footer>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+          <script src="{% static 'app/js/main.js' %}"></script>
+          <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    },
+                });
+          </script>
+</body>
+</html>
